@@ -4,7 +4,7 @@ export default function Home() {
       <div className="mx-auto max-w-5xl">
         <header className="mb-10">
           <h1 className="text-4xl font-bold tracking-tight">
-            Neighborhood Listing Platform
+            Neighborhood Listing Platform - Updated!
           </h1>
 
           <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-700">
