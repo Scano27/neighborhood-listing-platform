@@ -26,3 +26,12 @@ Install dependencies:
 
 ```bash
 npm install
+```
+
+## Deployment
+
+The application is deployed on Vercel:
+
+https://neighborhood-listing-platform-rust.vercel.app/
+
+
