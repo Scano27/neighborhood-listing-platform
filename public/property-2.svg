@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#dbeafe"/>
+  <rect x="200" y="100" width="400" height="300" fill="#93c5fd"/>
+  <rect x="260" y="160" width="100" height="100" fill="#f8fafc"/>
+  <rect x="440" y="160" width="100" height="100" fill="#f8fafc"/>
+  <rect x="330" y="300" width="140" height="100" fill="#475569"/>
+  <text x="400" y="450" text-anchor="middle" font-family="Arial" font-size="28" fill="#111827">
+    Downtown Condo
+  </text>
+</svg>

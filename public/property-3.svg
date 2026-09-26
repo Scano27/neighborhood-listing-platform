@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#dcfce7"/>
+  <rect x="140" y="190" width="520" height="210" fill="#86efac"/>
+  <polygon points="110,190 400,60 690,190" fill="#15803d"/>
+  <rect x="330" y="290" width="140" height="110" fill="#166534"/>
+  <rect x="190" y="240" width="90" height="80" fill="#f0fdf4"/>
+  <rect x="520" y="240" width="90" height="80" fill="#f0fdf4"/>
+  <text x="400" y="450" text-anchor="middle" font-family="Arial" font-size="28" fill="#111827">
+    Quiet Neighborhood Home
+  </text>
+</svg>

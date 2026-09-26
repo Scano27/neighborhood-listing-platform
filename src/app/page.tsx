@@ -1,51 +1,94 @@
+import PropertyCard from "../components/PropertyCard";
+import SearchFilters from "../components/SearchFilters";
+import SponsorBanner from "../components/SponsorBanner";
+import type { Property, Sponsor } from "../types";
+
+const properties: Property[] = [
+  {
+    id: "property-1",
+    title: "Modern Family Home",
+    address: "123 Maple Street",
+    city: "Los Angeles",
+    price: 685000,
+    bedrooms: 3,
+    bathrooms: 2,
+    squareFootage: 1850,
+    imageUrl: "/property-1.svg",
+    imageAltText: "Modern family home on Maple Street",
+    detailsUrl: "#property-1",
+  },
+  {
+    id: "property-2",
+    title: "Downtown Condo",
+    address: "456 Main Avenue",
+    city: "Los Angeles",
+    price: 525000,
+    bedrooms: 2,
+    bathrooms: 2,
+    squareFootage: 1100,
+    imageUrl: "/property-2.svg",
+    imageAltText: "Downtown condo on Main Avenue",
+    detailsUrl: "#property-2",
+  },
+  {
+    id: "property-3",
+    title: "Quiet Neighborhood Home",
+    address: "789 Oak Drive",
+    city: "Los Angeles",
+    price: 745000,
+    bedrooms: 4,
+    bathrooms: 3,
+    squareFootage: 2200,
+    imageUrl: "/property-3.svg",
+    imageAltText: "Quiet neighborhood home on Oak Drive",
+    detailsUrl: "#property-3",
+  },
+];
+
+const sponsor: Sponsor = {
+  id: "sponsor-1",
+  businessName: "Neighborhood Realty",
+  websiteUrl: "https://example.com",
+};
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white px-6 py-16 text-slate-900">
-      <div className="mx-auto max-w-5xl">
-        <header className="mb-10">
-          <h1 className="text-4xl font-bold tracking-tight">
-            Neighborhood Listing Platform - Updated!
-          </h1>
+    <main className="mx-auto max-w-7xl px-4 py-8">
+      <h1 className="text-3xl font-bold">
+        Neighborhood Property Listings
+      </h1>
 
-          <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-700">
-            A simple platform for discovering neighborhood properties,
-            connecting with local sponsors, and getting helpful information
-            through accessible voice assistance.
-          </p>
-        </header>
+      <p className="mt-2 text-gray-600">
+        Browse local properties and connect with neighborhood sponsors.
+      </p>
 
-        <section
-          aria-labelledby="features-heading"
-          className="grid gap-6 md:grid-cols-3"
+      <div className="mt-8">
+        <SearchFilters />
+      </div>
+
+      <section
+        aria-labelledby="listings-heading"
+        className="mt-8"
+      >
+        <h2
+          id="listings-heading"
+          className="text-2xl font-semibold"
         >
-          <h2 id="features-heading" className="sr-only">
-            Platform Features
-          </h2>
+          Available Properties
+        </h2>
 
-          <article className="rounded-xl border border-slate-200 p-6 shadow-sm">
-            <h3 className="text-xl font-semibold">Listings</h3>
-            <p className="mt-3 leading-7 text-slate-700">
-              Browse neighborhood property listings and find information
-              about available properties.
-            </p>
-          </article>
+        <div className="mt-4 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {properties.map((property) => (
+            <PropertyCard
+              key={property.id}
+              property={property}
+            />
+          ))}
+        </div>
+      </section>
 
-          <article className="rounded-xl border border-slate-200 p-6 shadow-sm">
-            <h3 className="text-xl font-semibold">Neighborhood Sponsors</h3>
-            <p className="mt-3 leading-7 text-slate-700">
-              Discover local businesses and organizations that support the
-              neighborhoods they serve.
-            </p>
-          </article>
-
-          <article className="rounded-xl border border-slate-200 p-6 shadow-sm">
-            <h3 className="text-xl font-semibold">Voice Help</h3>
-            <p className="mt-3 leading-7 text-slate-700">
-              Provide accessible voice assistance to help users find
-              neighborhood and property information.
-            </p>
-          </article>
-        </section>
+      <div className="mt-8">
+        <SponsorBanner sponsor={sponsor} />
       </div>
     </main>
   );
