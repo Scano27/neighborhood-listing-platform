@@ -34,4 +34,14 @@ The application is deployed on Vercel:
 
 https://neighborhood-listing-platform-rust.vercel.app/
 
+## Component Hierarchy
+
+Page
+├── SearchFilters
+├── Listing Grid
+│   ├── PropertyCard
+│   ├── PropertyCard
+│   └── PropertyCard
+└── SponsorBanner
+
 
