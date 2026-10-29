@@ -7,24 +7,29 @@ interface SponsorBannerProps {
 export default function SponsorBanner({
   sponsor,
 }: SponsorBannerProps) {
+  const disclosureId = `sponsor-disclosure-${sponsor.id}`;
+
   return (
     <section
-      aria-labelledby="sponsor-heading"
+      aria-label={`Sponsored content from ${sponsor.businessName}`}
       className="rounded-lg border bg-gray-50 p-4"
     >
-      <p className="text-sm font-medium">
-        Sponsored
+      {/* Visible commercial disclosure */}
+      <p
+        id={disclosureId}
+        className="text-sm font-semibold"
+      >
+        Sponsored Partner
       </p>
 
-      <h2
-        id="sponsor-heading"
-        className="mt-1 text-lg font-semibold"
-      >
+      <h2 className="mt-1 text-lg font-semibold">
         {sponsor.businessName}
       </h2>
 
       <a
         href={sponsor.websiteUrl}
+        aria-describedby={disclosureId}
+        aria-label={`Visit ${sponsor.businessName}. Sponsored partner link.`}
         className="mt-2 inline-block underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
       >
         Visit {sponsor.businessName}
