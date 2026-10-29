@@ -40,3 +40,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 supabase/.temp/
+
+node_modules/
+.env
+.env*.local
+dist/
+.next/

@@ -14,17 +14,11 @@
 
 
 
-| Tool | Prompt | Output Used | Output Rejected | Verification | Commit |
-
-|---|---|---|---|---|---|
-
-| ChatGPT | App shell prompt | Project workflow and verification requirements | TBD | Lint and build passed | Pending |
-
-| Gemini | App shell prompt | File plan and accessibility requirements | Nested project creation command | Lint and build passed | Pending |
-
-| Google AI Studio | App Shell Architect prompt | File plan, accessibility requirements, and verification checklist | Project creation command using a different project name | Lint and build passed | Pending |
-
-
+| Step / Tool | Prompt Summary | Model Output Used | Model Output Rejected & Rationale | Verification Method | Associated Git Commit |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Initial project setup / ChatGPT | Requested a minimal Next.js App Router, TypeScript, and Tailwind starter with a file plan, commands, accessibility requirements, and verification checklist. | Project workflow and verification requirements. | No specific rejected output recorded; do not invent one. | Reviewed project files and ran available lint/build checks. | See Git history for the relevant setup commit. |
+| Initial project setup / Gemini | Requested a project file plan and accessibility guidance. | File plan and accessibility requirements. | Adapted the nested project creation command because the repository already existed. | Reviewed the repository structure and ran available lint/build checks. | See Git history for the relevant setup commit. |
+| Initial project setup / Google AI Studio | Used the “App Shell Architect” prompt for a neighborhood listing application. | File plan, accessibility requirements, and verification checklist. | Did not use the alternative project creation command because the existing repository was being used. | Reviewed project files and ran available lint/build checks. | See Git history for the relevant setup commit. |
 
 ## Two Differences Between ChatGPT and Gemini
 
