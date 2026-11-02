@@ -7,7 +7,10 @@ interface PropertyCardProps {
 
 export default function PropertyCard({ property }: PropertyCardProps) {
   return (
-    <article className="overflow-hidden rounded-lg border bg-white shadow-sm">
+    <article
+      aria-labelledby={`property-${property.id}-title`}
+      className="overflow-hidden rounded-lg border bg-white shadow-sm"
+    >
       <Image
         src={property.imageUrl}
         alt={
@@ -16,13 +19,19 @@ export default function PropertyCard({ property }: PropertyCardProps) {
         }
         width={400}
         height={250}
+        loading={property.id === "property-3" ? "eager" : "lazy"}
         className="h-48 w-full object-cover"
-      />notepad src/components/PropertyCard.tsx
+      />
 
       <div className="p-4">
-        <h3 className="text-xl font-semibold">
-          {property.title}
-        </h3>
+        <header>
+          <h2
+            id={`property-${property.id}-title`}
+            className="text-xl font-semibold"
+          >
+            {property.title}
+          </h2>
+        </header>
 
         <p className="mt-2 text-gray-600">
           {property.address}, {property.city}
@@ -32,7 +41,10 @@ export default function PropertyCard({ property }: PropertyCardProps) {
           ${property.price.toLocaleString()}
         </p>
 
-        <ul className="mt-3 flex gap-4 text-sm text-gray-600">
+        <ul
+          aria-label={`Features of ${property.title}`}
+          className="mt-3 flex flex-wrap gap-4 text-sm text-gray-600"
+        >
           <li>{property.bedrooms} bedrooms</li>
           <li>{property.bathrooms} bathrooms</li>
           <li>{property.squareFootage.toLocaleString()} sq ft</li>
@@ -40,7 +52,8 @@ export default function PropertyCard({ property }: PropertyCardProps) {
 
         <a
           href={property.detailsUrl}
-          className="mt-4 inline-block rounded-md px-3 py-2 font-medium underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
+          aria-label={`View details for ${property.title}`}
+          className="mt-4 inline-block rounded-md px-3 py-2 font-medium underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
         >
           View {property.title} details
         </a>
