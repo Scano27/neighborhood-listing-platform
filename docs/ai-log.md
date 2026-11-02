@@ -10,15 +10,18 @@
 
 
 
+
+
+
 ## AI Comparison
-
-
 
 | Step / Tool | Prompt Summary | Model Output Used | Model Output Rejected & Rationale | Verification Method | Associated Git Commit |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Initial project setup / ChatGPT | Requested a minimal Next.js App Router, TypeScript, and Tailwind starter with a file plan, commands, accessibility requirements, and verification checklist. | Project workflow and verification requirements. | No specific rejected output recorded; do not invent one. | Reviewed project files and ran available lint/build checks. | See Git history for the relevant setup commit. |
-| Initial project setup / Gemini | Requested a project file plan and accessibility guidance. | File plan and accessibility requirements. | Adapted the nested project creation command because the repository already existed. | Reviewed the repository structure and ran available lint/build checks. | See Git history for the relevant setup commit. |
-| Initial project setup / Google AI Studio | Used the “App Shell Architect” prompt for a neighborhood listing application. | File plan, accessibility requirements, and verification checklist. | Did not use the alternative project creation command because the existing repository was being used. | Reviewed project files and ran available lint/build checks. | See Git history for the relevant setup commit. |
+| Initial project setup / ChatGPT | Requested a minimal Next.js App Router, TypeScript, and Tailwind starter with accessibility requirements and verification steps. | Used the proposed project workflow, file organization, and verification checklist. | No specific ChatGPT recommendation was rejected. | Reviewed the existing repository structure and checked the application locally. | 0719fd6 |
+| Initial project setup / Gemini | Requested a project file plan and accessibility guidance. | Used the suggested file organization and accessibility recommendations. | Rejected creating a new project directory because the neighborhood-listing-platform repository had already been cloned. Creating another directory would duplicate the project. | Confirmed the existing repository path and inspected its files. | 0719fd6 |
+| Application architecture / Google AI Studio | Used the App Shell Architect prompt to propose a neighborhood listing application. | Used the proposed application structure and reviewed reusable components, property listings, and accessibility suggestions. | Did not use the alternative project creation approach because development was continuing inside the existing repository. | Reviewed the implemented application and its component files. | 22e0095 |
+| Accessible component implementation / AI assistance | Reviewed recommendations for semantic HTML, keyboard navigation, and reusable property components. | Used accessible property card and search filter implementation ideas. | Rejected unnecessary replacement of existing project files when the existing components could be extended. | Inspected component code and reviewed keyboard accessibility requirements. | 46e02e7 |
+| Database and sponsor implementation / AI assistance | Reviewed database organization and sponsor-related feature requirements. | Used database and sponsor implementation guidance as a starting point. | Rejected changes that would duplicate existing database structures or introduce unnecessary files. | Reviewed migration files and database implementation. | 3f22667 |
 
 ## Two Differences Between ChatGPT and Gemini
 
@@ -56,11 +59,11 @@ The proposed project creation command was not used because the assignment reposi
 
 
 
-## Verification
+## Verification Plan
 
 
 
-The AI suggestions will be verified by:
+The following checks are used to verify the AI-assisted work:
 
 
 
@@ -84,12 +87,12 @@ The AI suggestions will be verified by:
 
 ## Final Verification
 
-- `npm run lint` passed successfully.
-- `npm run build` passed successfully.
-- The application was tested locally at `http://localhost:3000`.
-- The deployed application was verified on Vercel.
-- Git working directory is clean.
-- `.env`, `node_modules`, `.next`, `out`, and `build` files are not tracked by Git.
+- Lint and build results should be confirmed using the current exam branch before final submission.
+- Local application testing should be confirmed at `http://localhost:3000`.
+- Deployment should be checked using the Vercel URL listed below.
+- Git status and tracked files should be reviewed before final submission.
+- Confirm that `.env`, `node_modules`, `.next`, `out`, and `build` files are not tracked by Git.
+- Record actual test results and any remaining issues before submission.
 
 ## Deployment
 
